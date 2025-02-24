@@ -1,0 +1,78 @@
+
+---------------------------------------
+
+When I ran the above source I got the following error
+
+Exception has occurred: FailedPrecondition
+
+400 Location 'locations/global' violates constraint 'constraints/gcp.resourceLocations' on the resource 'projects/GDE-Demo'. [reason: "LOCATION_ORG_POLICY_VIOLATED"
+
+domain: "googleapis.com"
+
+metadata {
+
+key: "resource"
+
+value: "projects/GDE-Demo"
+
+}
+
+metadata {
+
+key: "location"
+
+value: "global"
+
+}
+
+, locale: "en-US"
+
+message: "Location \'locations/global\' violates constraint \'constraints/gcp.resourceLocations\' on the resource \'projects/GDE-Demo\'."
+
+]
+
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+
+status = StatusCode.FAILED_PRECONDITION
+
+details = "Location 'locations/global' violates constraint 'constraints/gcp.resourceLocations' on the resource 'projects/GDE-Demo'."
+
+debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.195.106:443 {created_time:"2025-02-23T11:20:46.741603778+05:30", grpc_status:9, grpc_message:"Location \'locations/global\' violates constraint \'constraints/gcp.resourceLocations\' on the resource \'projects/GDE-Demo\'."}"
+
+>
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+
+File "/home/ps/source/samples/gcp/gde/gde-simple.py", line 63, in <module>
+
+operation = client.import_documents(request=request)
+
+google.api_core.exceptions.FailedPrecondition: 400 Location 'locations/global' violates constraint 'constraints/gcp.resourceLocations' on the resource 'projects/GDE-Demo'. [reason: "LOCATION_ORG_POLICY_VIOLATED"
+
+domain: "googleapis.com"
+
+metadata {
+
+key: "resource"
+
+value: "projects/GDE-Demo"
+
+}
+
+metadata {
+
+key: "location"
+
+value: "global"
+
+}
+
+, locale: "en-US"
+
+message: "Location \'locations/global\' violates constraint \'constraints/gcp.resourceLocations\' on the resource \'projects/GDE-Demo\'."
+
+]
